@@ -1,0 +1,967 @@
+!!!
+/[if lt IE 7 ] <html class="ie ie6" lang="en">
+/[if IE 7 ] <html class="ie ie7" lang="en">
+/[if IE 8 ] <html class="ie ie8" lang="en">
+/ [if (gte IE 9)|!(IE)]><!
+%html{:lang => "en"}
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}/
+    / Page Title
+    %title Cozy - HTML5 Template
+    %meta{:content => "real estate, responsive, retina ready, modern html5 template, bootstrap, css3", :name => "keywords"}/
+    %meta{:content => "Cozy - Responsive Real Estate HTML5 Template", :name => "description"}/
+    %meta{:content => "Wisely Themes - www.wiselythemes.com", :name => "author"}/
+    / Mobile Meta Tag
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}/
+    / Fav and touch icons
+    %link{:href => "images/fav_touch_icons/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "images/fav_touch_icons/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    %link{:href => "images/fav_touch_icons/apple-touch-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}/
+    %link{:href => "images/fav_touch_icons/apple-touch-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}/
+    / IE6-8 support of HTML5 elements
+    /[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    / Google Web Font
+    %link{:href => "http://fonts.googleapis.com/css?family=Raleway:300,500,900%7COpen+Sans:400,700,400italic", :rel => "stylesheet", :type => "text/css"}/
+    / Bootstrap CSS
+    {{ 'bootstrap.min' | stylesheet_tag }}
+    / Template CSS
+    {{ 'style.css' | stylesheet_tag }}
+    / Modernizr
+    {{ 'modernizr-2.8.1.min.js' | javascript_tag }}
+  %body
+    / BEGIN WRAPPER
+    #wrapper
+      / BEGIN HEADER
+      %header#header
+        #top-bar
+          .container
+            .row
+              .col-sm-12
+                %ul#top-info
+                  %li Phone: 800-123-4567
+                  %li
+                    Email:
+                    %a{:href => "mailto:hello@yourcompany.com"} hello@yourcompany.com
+                %ul#top-buttons
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-sign-in
+                      Login
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-pencil-square-o
+                      Register
+                  %li.divider
+                  %li
+                    .language-switcher
+                      %span
+                        %i.fa.fa-globe
+                        English
+                      %ul
+                        %li
+                          %a{:href => "#"} Deutsch
+                        %li
+                          %a{:href => "#"} Español
+                        %li
+                          %a{:href => "#"} Français
+                        %li
+                          %a{:href => "#"} Português
+        #nav-section
+          .container
+            .row
+              .col-sm-12
+                %a.nav-logo{:href => "index.html"}
+                  %img{:alt => "Cozy Logo", :src => "images/logo.png"}/
+                / BEGIN SEARCH
+                #sb-search.sb-search
+                  %form
+                    %input#search.sb-search-input{:name => "search", :placeholder => "Search...", :type => "text", :value => ""}/
+                    %input.sb-search-submit{:type => "submit", :value => ""}/
+                    %i.fa.fa-search.sb-icon-search
+                / END SEARCH
+                / BEGIN MAIN MENU
+                %nav.navbar
+                  %button#nav-mobile-btn
+                    %i.fa.fa-bars
+                  %ul.nav.navbar-nav
+                    %li.dropdown
+                      %a.active{"data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
+                        Home
+                        %b.caret
+                      %ul.dropdown-menu
+                        %li
+                          %a.active{:href => "index.html"} Home Search
+                        %li
+                          %a{:href => "index-slider.html"} Home Slider
+                        %li
+                          %a{:href => "index-grid.html"} Home Grid
+                        %li
+                          %a{:href => "index-map.html"} Home Map
+                    %li.dropdown
+                      %a{"data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
+                        Properties
+                        %b.caret
+                      %ul.dropdown-menu
+                        %li
+                          %a{:href => "properties-detail.html"} Properties Detail
+                        %li
+                          %a{:href => "properties-list.html"} Properties List
+                        %li
+                          %a{:href => "properties-grid.html"} Properties Grid
+                        %li
+                          %a{:href => "properties-grid2.html"} Properties Grid 2
+                    %li.dropdown
+                      %a{"data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
+                        Pages
+                        %b.caret
+                      %ul.dropdown-menu
+                        %li
+                          %a{:href => "about.html"} About Us
+                        %li.dropdown-submenu
+                          %a{:href => "#"} Agency
+                          %ul.dropdown-menu
+                            %li
+                              %a{:href => "agency-detail.html"} Agency Detail
+                            %li
+                              %a{:href => "agency-listing.html"} Agency Listing
+                        %li.dropdown-submenu
+                          %a{:href => "#"} Agent
+                          %ul.dropdown-menu
+                            %li
+                              %a{:href => "agent-detail.html"} Agent Detail
+                            %li
+                              %a{:href => "agent-listing.html"} Agent Listing
+                        %li
+                          %a{:href => "pricing-tables.html"} Pricing Tables
+                        %li
+                          %a{:href => "login.html"} Login
+                        %li
+                          %a{:href => "register.html"} Register
+                        %li
+                          %a{:href => "faq.html"} FAQ
+                        %li
+                          %a{:href => "404.html"} 404
+                        %li.divider
+                        %li
+                          %a{:href => "#", :tabindex => "-1"} Separated link
+                    %li.dropdown
+                      %a{"data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
+                        Blog
+                        %b.caret
+                      %ul.dropdown-menu
+                        %li
+                          %a{:href => "blog-detail.html"} Blog Detail
+                        %li
+                          %a{:href => "blog-listing1.html"} Blog Listing 1
+                        %li
+                          %a{:href => "blog-listing2.html"} Blog Listing 2
+                        %li
+                          %a{:href => "blog-listing3.html"} Blog Listing 3
+                        %li
+                          %a{:href => "blog-listing4.html"} Blog Listing 4
+                    %li
+                      %a{:href => "contacts.html"} Contacts
+                / END MAIN MENU
+      / END HEADER
+      / BEGIN HOME SEARCH SECTION
+      %section#home-search-section{"data-stellar-background-ratio" => "0.5"}
+        .container
+          .row
+            .col-sm-12{"data-animation-delay" => "50", "data-animation-direction" => "from-top"}
+              %h2.slider-title Find the perfect home
+              .slider-subtitle With Cozy Real Estate HTML Template
+            #home-search-buttons.col-sm-6.col-sm-offset-3{"data-animation-delay" => "250", "data-animation-direction" => "from-bottom"}
+              %button.btn.btn-default.active For Sale
+              %button.btn.btn-default For Rent
+              .input-group
+                %input#home_search.form-control{:name => "home_search", :placeholder => "City, State, Country, etc...", :type => "text"}/
+                %span.input-group-btn
+                  %button.btn.btn-default{:type => "button"}
+                    %i.fa.fa-search>
+                    Search
+              %a.advanced-search{:href => "#"} Advanced Search
+      / END HOME SEARCH SECTION
+      / BEGIN ACTION BOX
+      .action-box
+        .container
+          .row
+            .col-sm-12.center
+              %h2
+                Cozy - Real Estate Template it's Awesome!
+                %br>/
+                It offers you a lot of great features.
+              %div
+                %a.btn.btn-default.btn-lg{:href => "http://themeforest.net/user/WiselyThemes", :target => "_blank"} Buy Now!
+      / END ACTION BOX
+      / BEGIN PROPERTIES SLIDER WRAPPER
+      .parallax.pattern-bg{"data-stellar-background-ratio" => "0.5"}
+        .container
+          .row
+            .col-sm-12
+              %h1.section-title{"data-animation-delay" => "50", "data-animation-direction" => "from-bottom"} New Properties Available
+              #new-properties-slider.owl-carousel.carousel-style1
+                .item{"data-animation-delay" => "250", "data-animation-direction" => "from-bottom"}
+                  .image
+                    %a.info{:href => "properties-detail.html"}
+                      %h3 Luxury Apartment with great views
+                      %span.location Upper East Side, New York
+                    %img{:alt => "", :src => "http://placehold.it/760x670"}/
+                  .price
+                    %i.fa.fa-home>
+                    For Sale
+                    %span $950,000
+                  %ul.amenities
+                    %li
+                      %i.icon-area
+                      2150 Sq Ft
+                    %li
+                      %i.icon-bedrooms
+                      4
+                    %li
+                      %i.icon-bathrooms
+                      3
+                .item{"data-animation-delay" => "450", "data-animation-direction" => "from-bottom"}
+                  .image
+                    %a.info{:href => "properties-detail.html"}
+                      %h3 Stunning Villa with 5 bedrooms
+                      %span.location Miami Beach, Florida
+                    %img{:alt => "", :src => "http://placehold.it/760x670"}/
+                  .price
+                    %i.fa.fa-home>
+                    For Sale
+                    %span $1,253,000
+                  %ul.amenities
+                    %li
+                      %i.icon-area
+                      3470 Sq Ft
+                    %li
+                      %i.icon-bedrooms
+                      5
+                    %li
+                      %i.icon-bathrooms
+                      4
+                .item{"data-animation-delay" => "650", "data-animation-direction" => "from-bottom"}
+                  .image
+                    %a.info{:href => "properties-detail.html"}
+                      %h3 Recent construction with 3 bedrooms
+                      %span.location Park Slope, New York
+                    %img{:alt => "", :src => "http://placehold.it/760x670"}/
+                  .price
+                    %i.fa.fa-home>
+                    For Sale
+                    %span $560,000
+                  %ul.amenities
+                    %li
+                      %i.icon-area
+                      1800 Sq Ft
+                    %li
+                      %i.icon-bedrooms
+                      3
+                    %li
+                      %i.icon-bathrooms
+                      2
+                .item{"data-animation-delay" => "850", "data-animation-direction" => "from-bottom"}
+                  .image
+                    %a.info{:href => "properties-detail.html"}
+                      %h3 Modern construction with parking space
+                      %span.location Midtown, New York
+                    %img{:alt => "", :src => "http://placehold.it/760x670"}/
+                  .price
+                    %i.fa.fa-home>
+                    For Rent
+                    %span $850
+                  %ul.amenities
+                    %li
+                      %i.icon-area
+                      1300 Sq Ft
+                    %li
+                      %i.icon-bedrooms
+                      1
+                    %li
+                      %i.icon-bathrooms
+                      2
+                .item
+                  .image
+                    %a.info{:href => "properties-detail.html"}
+                      %h3 Single Family Townhouse
+                      %span.location Cobble Hill, New York
+                    %img{:alt => "", :src => "http://placehold.it/760x670"}/
+                  .price
+                    %i.fa.fa-home>
+                    For Sale
+                    %span $846,000
+                  %ul.amenities
+                    %li
+                      %i.icon-area
+                      1580 Sq Ft
+                    %li
+                      %i.icon-bedrooms
+                      2
+                    %li
+                      %i.icon-bathrooms
+                      2
+                .item
+                  .image
+                    %a.info{:href => "properties-detail.html"}
+                      %h3 3 bedroom villa with garage for rent
+                      %span.location Bal Harbour, Florida
+                    %img{:alt => "", :src => "http://placehold.it/760x670"}/
+                  .price
+                    %i.fa.fa-home>
+                    For Rent
+                    %span $1500
+                  %ul.amenities
+                    %li
+                      %i.icon-area
+                      2000 Sq Ft
+                    %li
+                      %i.icon-bedrooms
+                      3
+                    %li
+                      %i.icon-bathrooms
+                      2
+                .item
+                  .image
+                    %a.info{:href => "properties-detail.html"}
+                      %h3 Luxury Condo with 2 bedroms
+                      %span.location Brooklyn Heights, New York
+                    %img{:alt => "", :src => "http://placehold.it/760x670"}/
+                  .price
+                    %i.fa.fa-home>
+                    For Sale
+                    %span $2,120,000
+                  %ul.amenities
+                    %li
+                      %i.icon-area
+                      3120 Sq Ft
+                    %li
+                      %i.icon-bedrooms
+                      4
+                    %li
+                      %i.icon-bathrooms
+                      2
+                .item
+                  .image
+                    %a.info{:href => "properties-detail.html"}
+                      %h3 Edition Residences on Collins Avenue
+                      %span.location Miami Beach, Florida
+                    %img{:alt => "", :src => "http://placehold.it/760x670"}/
+                  .price
+                    %i.fa.fa-home>
+                    For Sale
+                    %span $975,000
+                  %ul.amenities
+                    %li
+                      %i.icon-area
+                      1200 Sq Ft
+                    %li
+                      %i.icon-bedrooms
+                      1
+                    %li
+                      %i.icon-bathrooms
+                      2
+                .item
+                  .image
+                    %a.info{:href => "properties-detail.html"}
+                      %h3 Gorgeous Apartment in New York
+                      %span.location Soho - Nolita, New York
+                    %img{:alt => "", :src => "http://placehold.it/760x670"}/
+                  .price
+                    %i.fa.fa-home>
+                    For Sale
+                    %span $650,000
+                  %ul.amenities
+                    %li
+                      %i.icon-area
+                      1000 Sq Ft
+                    %li
+                      %i.icon-bedrooms
+                      1
+                    %li
+                      %i.icon-bathrooms
+                      1
+      / END PROPERTIES SLIDER WRAPPER
+      / BEGIN CONTENT WRAPPER
+      .content.colored
+        .container
+          .row
+            / BEGIN MAIN CONTENT
+            .main.col-sm-8
+              %h1.section-title{"data-animation-delay" => "50", "data-animation-direction" => "from-bottom"} Template Features
+              .feature.col-sm-4{"data-animation-delay" => "250", "data-animation-direction" => "from-bottom"}
+                %i.fa.fa-pencil
+                %h3 Simple, Clean & Modern Design
+                %p Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis.
+                %a.btn.btn-default-color{:href => "about.html"} Read More
+              .feature.col-sm-4{"data-animation-delay" => "450", "data-animation-direction" => "from-bottom"}
+                %i.fa.fa-tablet
+                %h3 Fully Responsive & Retina Ready
+                %p Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis.
+                %a.btn.btn-default-color{:href => "about.html"} Read More
+              .feature.col-sm-4{"data-animation-delay" => "650", "data-animation-direction" => "from-bottom"}
+                %i.fa.fa-copy
+                %h3 +20 different Pages highly Customizable
+                %p Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis.
+                %a.btn.btn-default-color{:href => "about.html"} Read More
+              %h1.section-title{"data-animation-delay" => "50", "data-animation-direction" => "from-bottom"} Property Gallery
+              %p.center{"data-animation-delay" => "150", "data-animation-direction" => "from-bottom"} Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis. Pellentesque elementum libero enim, eget gravida nunc laoreet et.
+              #property-gallery.owl-carousel.property-gallery
+                .item{"data-animation-delay" => "350", "data-animation-direction" => "from-bottom"}
+                  %a{"data-gal" => "prettyPhoto[gallery]", :href => "http://placehold.it/760x670", :title => "Lorem ipsum"}
+                    %span.btn.btn-default +
+                  %img{:alt => "", :src => "http://placehold.it/246x217"}/
+                .item{"data-animation-delay" => "350", "data-animation-direction" => "from-bottom"}
+                  %a{"data-gal" => "prettyPhoto[gallery]", :href => "http://placehold.it/760x670", :title => "Lorem ipsum"}
+                    %span.btn.btn-default +
+                  %img{:alt => "", :src => "http://placehold.it/246x217"}/
+                .item{"data-animation-delay" => "350", "data-animation-direction" => "from-bottom"}
+                  %a{"data-gal" => "prettyPhoto[gallery]", :href => "http://placehold.it/760x670", :title => "Lorem ipsum"}
+                    %span.btn.btn-default +
+                  %img{:alt => "", :src => "http://placehold.it/246x217"}/
+                .item
+                  %a{"data-gal" => "prettyPhoto[gallery]", :href => "http://placehold.it/760x670", :title => "Lorem ipsum"}
+                    %span.btn.btn-default +
+                  %img{:alt => "", :src => "http://placehold.it/246x217"}/
+                .item
+                  %a{"data-gal" => "prettyPhoto[gallery]", :href => "http://placehold.it/760x670", :title => "Lorem ipsum"}
+                    %span.btn.btn-default +
+                  %img{:alt => "", :src => "http://placehold.it/246x217"}/
+                .item
+                  %a{"data-gal" => "prettyPhoto[gallery]", :href => "http://placehold.it/760x670", :title => "Lorem ipsum"}
+                    %span.btn.btn-default +
+                  %img{:alt => "", :src => "http://placehold.it/246x217"}/
+              / BEGIN LATEST NEWS
+              %h1.section-title{"data-animation-delay" => "50", "data-animation-direction" => "from-bottom"} Latest News
+              .latest-news.list-style.clearfix
+                .item.col-sm-12{"data-animation-delay" => "250", "data-animation-direction" => "from-bottom"}
+                  .image
+                    %a{:href => "blog-detail.html"}
+                      %span.btn.btn-default
+                        %i.fa.fa-file-o
+                        Read More
+                    %img{:alt => "", :src => "http://placehold.it/766x515"}/
+                  .tag
+                    %i.fa.fa-file-text
+                  .info-blog
+                    %ul.top-info
+                      %li
+                        %i.fa.fa-calendar
+                        July 30, 2014
+                      %li
+                        %i.fa.fa-comments-o
+                        2
+                      %li
+                        %i.fa.fa-tags
+                        Properties, Prices, best deals
+                    %h3
+                      %a{:href => "blog-detail.html"} How to get your dream property for the best price?
+                    %p Sed rutrum urna id tellus euismod gravida. Praesent placerat, mauris ac pellentesque fringilla, tortor libero condimen.
+                .item.col-sm-12{"data-animation-delay" => "450", "data-animation-direction" => "from-bottom"}
+                  .image
+                    %a{:href => "blog-detail.html"}
+                      %span.btn.btn-default
+                        %i.fa.fa-file-o
+                        Read More
+                    %img{:alt => "", :src => "http://placehold.it/766x515"}/
+                  .tag
+                    %i.fa.fa-film
+                  .info-blog
+                    %ul.top-info
+                      %li
+                        %i.fa.fa-calendar
+                        July 24, 2014
+                      %li
+                        %i.fa.fa-comments-o
+                        4
+                      %li
+                        %i.fa.fa-tags
+                        Tips, Mortgage
+                    %h3
+                      %a{:href => "blog-detail.html"} 7 tips to get the best mortgage.
+                    %p Sed rutrum urna id tellus euismod gravida. Praesent placerat, mauris ac pellentesque fringilla, tortor libero condimen.
+                .item.col-sm-12{"data-animation-delay" => "650", "data-animation-direction" => "from-bottom"}
+                  .image
+                    %a{:href => "blog-detail.html"}
+                      %span.btn.btn-default
+                        %i.fa.fa-file-o
+                        Read More
+                    %img{:alt => "", :src => "http://placehold.it/766x515"}/
+                  .tag
+                    %i.fa.fa-file-text
+                  .info-blog
+                    %ul.top-info
+                      %li
+                        %i.fa.fa-calendar
+                        July 05, 2014
+                      %li
+                        %i.fa.fa-comments-o
+                        1
+                      %li
+                        %i.fa.fa-tags
+                        Location, Price, House
+                    %h3
+                      %a{:href => "blog-detail.html"} House, location or price: What's the most important factor?
+                    %p Sed rutrum urna id tellus euismod gravida. Praesent placerat, mauris ac pellentesque fringilla, tortor libero condimen.
+              / END LATEST NEWS
+            / END MAIN CONTENT
+            / BEGIN SIDEBAR
+            .sidebar.colored.col-sm-4
+              / BEGIN FIND AGENTS
+              #find_agents.col-sm-12{"data-animation-delay" => "250", "data-animation-direction" => "fade"}
+                %h2.section-title Find An Agent
+                %img#agents-img{:alt => "", :src => "http://placehold.it/307x188"}/
+                %select#agents_country{"data-placeholder" => "Choose a country", :name => "agents_country"}
+                  %option{:value => ""}
+                  %option{:value => "United States"} United States
+                  %option{:value => "United Kingdom"} United Kingdom
+                  %option{:value => "Afghanistan"} Afghanistan
+                  %option{:value => "Albania"} Albania
+                  %option{:value => "Algeria"} Algeria
+                  %option{:value => "American Samoa"} American Samoa
+                  %option{:value => "Andorra"} Andorra
+                  %option{:value => "Angola"} Angola
+                  %option{:value => "Anguilla"} Anguilla
+                  %option{:value => "Antarctica"} Antarctica
+                  %option{:value => "Antigua and Barbuda"} Antigua and Barbuda
+                  %option{:value => "Argentina"} Argentina
+                  %option{:value => "Armenia"} Armenia
+                  %option{:value => "Aruba"} Aruba
+                  %option{:value => "Australia"} Australia
+                  %option{:value => "Austria"} Austria
+                  %option{:value => "Azerbaijan"} Azerbaijan
+                  %option{:value => "Bahamas"} Bahamas
+                  %option{:value => "Bahrain"} Bahrain
+                  %option{:value => "Bangladesh"} Bangladesh
+                  %option{:value => "Barbados"} Barbados
+                  %option{:value => "Belarus"} Belarus
+                  %option{:value => "Belgium"} Belgium
+                  %option{:value => "Belize"} Belize
+                  %option{:value => "Benin"} Benin
+                  %option{:value => "Bermuda"} Bermuda
+                  %option{:value => "Bhutan"} Bhutan
+                  %option{:value => "Bolivia"} Bolivia
+                  %option{:value => "Bosnia and Herzegovina"} Bosnia and Herzegovina
+                  %option{:value => "Botswana"} Botswana
+                  %option{:value => "Bouvet Island"} Bouvet Island
+                  %option{:value => "Brazil"} Brazil
+                  %option{:value => "British Indian Ocean Territory"} British Indian Ocean Territory
+                  %option{:value => "Brunei Darussalam"} Brunei Darussalam
+                  %option{:value => "Bulgaria"} Bulgaria
+                  %option{:value => "Burkina Faso"} Burkina Faso
+                  %option{:value => "Burundi"} Burundi
+                  %option{:value => "Cambodia"} Cambodia
+                  %option{:value => "Cameroon"} Cameroon
+                  %option{:value => "Canada"} Canada
+                  %option{:value => "Cape Verde"} Cape Verde
+                  %option{:value => "Cayman Islands"} Cayman Islands
+                  %option{:value => "Central African Republic"} Central African Republic
+                  %option{:value => "Chad"} Chad
+                  %option{:value => "Chile"} Chile
+                  %option{:value => "China"} China
+                  %option{:value => "Christmas Island"} Christmas Island
+                  %option{:value => "Cocos (Keeling) Islands"} Cocos (Keeling) Islands
+                  %option{:value => "Colombia"} Colombia
+                  %option{:value => "Comoros"} Comoros
+                  %option{:value => "Congo"} Congo
+                  %option{:value => "Congo, The Democratic Republic of The"} Congo, The Democratic Republic of The
+                  %option{:value => "Cook Islands"} Cook Islands
+                  %option{:value => "Costa Rica"} Costa Rica
+                  %option{:value => "Cote D'ivoire"} Cote D'ivoire
+                  %option{:value => "Croatia"} Croatia
+                  %option{:value => "Cuba"} Cuba
+                  %option{:value => "Cyprus"} Cyprus
+                  %option{:value => "Czech Republic"} Czech Republic
+                  %option{:value => "Denmark"} Denmark
+                  %option{:value => "Djibouti"} Djibouti
+                  %option{:value => "Dominica"} Dominica
+                  %option{:value => "Dominican Republic"} Dominican Republic
+                  %option{:value => "Ecuador"} Ecuador
+                  %option{:value => "Egypt"} Egypt
+                  %option{:value => "El Salvador"} El Salvador
+                  %option{:value => "Equatorial Guinea"} Equatorial Guinea
+                  %option{:value => "Eritrea"} Eritrea
+                  %option{:value => "Estonia"} Estonia
+                  %option{:value => "Ethiopia"} Ethiopia
+                  %option{:value => "Falkland Islands (Malvinas)"} Falkland Islands (Malvinas)
+                  %option{:value => "Faroe Islands"} Faroe Islands
+                  %option{:value => "Fiji"} Fiji
+                  %option{:value => "Finland"} Finland
+                  %option{:value => "France"} France
+                  %option{:value => "French Guiana"} French Guiana
+                  %option{:value => "French Polynesia"} French Polynesia
+                  %option{:value => "French Southern Territories"} French Southern Territories
+                  %option{:value => "Gabon"} Gabon
+                  %option{:value => "Gambia"} Gambia
+                  %option{:value => "Georgia"} Georgia
+                  %option{:value => "Germany"} Germany
+                  %option{:value => "Ghana"} Ghana
+                  %option{:value => "Gibraltar"} Gibraltar
+                  %option{:value => "Greece"} Greece
+                  %option{:value => "Greenland"} Greenland
+                  %option{:value => "Grenada"} Grenada
+                  %option{:value => "Guadeloupe"} Guadeloupe
+                  %option{:value => "Guam"} Guam
+                  %option{:value => "Guatemala"} Guatemala
+                  %option{:value => "Guinea"} Guinea
+                  %option{:value => "Guinea-bissau"} Guinea-bissau
+                  %option{:value => "Guyana"} Guyana
+                  %option{:value => "Haiti"} Haiti
+                  %option{:value => "Heard Island and Mcdonald Islands"} Heard Island and Mcdonald Islands
+                  %option{:value => "Holy See (Vatican City State)"} Holy See (Vatican City State)
+                  %option{:value => "Honduras"} Honduras
+                  %option{:value => "Hong Kong"} Hong Kong
+                  %option{:value => "Hungary"} Hungary
+                  %option{:value => "Iceland"} Iceland
+                  %option{:value => "India"} India
+                  %option{:value => "Indonesia"} Indonesia
+                  %option{:value => "Iran, Islamic Republic of"} Iran, Islamic Republic of
+                  %option{:value => "Iraq"} Iraq
+                  %option{:value => "Ireland"} Ireland
+                  %option{:value => "Israel"} Israel
+                  %option{:value => "Italy"} Italy
+                  %option{:value => "Jamaica"} Jamaica
+                  %option{:value => "Japan"} Japan
+                  %option{:value => "Jordan"} Jordan
+                  %option{:value => "Kazakhstan"} Kazakhstan
+                  %option{:value => "Kenya"} Kenya
+                  %option{:value => "Kiribati"} Kiribati
+                  %option{:value => "Korea, Democratic People's Republic of"} Korea, Democratic People's Republic of
+                  %option{:value => "Korea, Republic of"} Korea, Republic of
+                  %option{:value => "Kuwait"} Kuwait
+                  %option{:value => "Kyrgyzstan"} Kyrgyzstan
+                  %option{:value => "Lao People's Democratic Republic"} Lao People's Democratic Republic
+                  %option{:value => "Latvia"} Latvia
+                  %option{:value => "Lebanon"} Lebanon
+                  %option{:value => "Lesotho"} Lesotho
+                  %option{:value => "Liberia"} Liberia
+                  %option{:value => "Libyan Arab Jamahiriya"} Libyan Arab Jamahiriya
+                  %option{:value => "Liechtenstein"} Liechtenstein
+                  %option{:value => "Lithuania"} Lithuania
+                  %option{:value => "Luxembourg"} Luxembourg
+                  %option{:value => "Macao"} Macao
+                  %option{:value => "Macedonia, The Former Yugoslav Republic of"} Macedonia, The Former Yugoslav Republic of
+                  %option{:value => "Madagascar"} Madagascar
+                  %option{:value => "Malawi"} Malawi
+                  %option{:value => "Malaysia"} Malaysia
+                  %option{:value => "Maldives"} Maldives
+                  %option{:value => "Mali"} Mali
+                  %option{:value => "Malta"} Malta
+                  %option{:value => "Marshall Islands"} Marshall Islands
+                  %option{:value => "Martinique"} Martinique
+                  %option{:value => "Mauritania"} Mauritania
+                  %option{:value => "Mauritius"} Mauritius
+                  %option{:value => "Mayotte"} Mayotte
+                  %option{:value => "Mexico"} Mexico
+                  %option{:value => "Micronesia, Federated States of"} Micronesia, Federated States of
+                  %option{:value => "Moldova, Republic of"} Moldova, Republic of
+                  %option{:value => "Monaco"} Monaco
+                  %option{:value => "Mongolia"} Mongolia
+                  %option{:value => "Montserrat"} Montserrat
+                  %option{:value => "Morocco"} Morocco
+                  %option{:value => "Mozambique"} Mozambique
+                  %option{:value => "Myanmar"} Myanmar
+                  %option{:value => "Namibia"} Namibia
+                  %option{:value => "Nauru"} Nauru
+                  %option{:value => "Nepal"} Nepal
+                  %option{:value => "Netherlands"} Netherlands
+                  %option{:value => "Netherlands Antilles"} Netherlands Antilles
+                  %option{:value => "New Caledonia"} New Caledonia
+                  %option{:value => "New Zealand"} New Zealand
+                  %option{:value => "Nicaragua"} Nicaragua
+                  %option{:value => "Niger"} Niger
+                  %option{:value => "Nigeria"} Nigeria
+                  %option{:value => "Niue"} Niue
+                  %option{:value => "Norfolk Island"} Norfolk Island
+                  %option{:value => "Northern Mariana Islands"} Northern Mariana Islands
+                  %option{:value => "Norway"} Norway
+                  %option{:value => "Oman"} Oman
+                  %option{:value => "Pakistan"} Pakistan
+                  %option{:value => "Palau"} Palau
+                  %option{:value => "Palestinian Territory, Occupied"} Palestinian Territory, Occupied
+                  %option{:value => "Panama"} Panama
+                  %option{:value => "Papua New Guinea"} Papua New Guinea
+                  %option{:value => "Paraguay"} Paraguay
+                  %option{:value => "Peru"} Peru
+                  %option{:value => "Philippines"} Philippines
+                  %option{:value => "Pitcairn"} Pitcairn
+                  %option{:value => "Poland"} Poland
+                  %option{:value => "Portugal"} Portugal
+                  %option{:value => "Puerto Rico"} Puerto Rico
+                  %option{:value => "Qatar"} Qatar
+                  %option{:value => "Reunion"} Reunion
+                  %option{:value => "Romania"} Romania
+                  %option{:value => "Russian Federation"} Russian Federation
+                  %option{:value => "Rwanda"} Rwanda
+                  %option{:value => "Saint Helena"} Saint Helena
+                  %option{:value => "Saint Kitts and Nevis"} Saint Kitts and Nevis
+                  %option{:value => "Saint Lucia"} Saint Lucia
+                  %option{:value => "Saint Pierre and Miquelon"} Saint Pierre and Miquelon
+                  %option{:value => "Saint Vincent and The Grenadines"} Saint Vincent and The Grenadines
+                  %option{:value => "Samoa"} Samoa
+                  %option{:value => "San Marino"} San Marino
+                  %option{:value => "Sao Tome and Principe"} Sao Tome and Principe
+                  %option{:value => "Saudi Arabia"} Saudi Arabia
+                  %option{:value => "Senegal"} Senegal
+                  %option{:value => "Serbia and Montenegro"} Serbia and Montenegro
+                  %option{:value => "Seychelles"} Seychelles
+                  %option{:value => "Sierra Leone"} Sierra Leone
+                  %option{:value => "Singapore"} Singapore
+                  %option{:value => "Slovakia"} Slovakia
+                  %option{:value => "Slovenia"} Slovenia
+                  %option{:value => "Solomon Islands"} Solomon Islands
+                  %option{:value => "Somalia"} Somalia
+                  %option{:value => "South Africa"} South Africa
+                  %option{:value => "South Georgia and The South Sandwich Islands"} South Georgia and The South Sandwich Islands
+                  %option{:value => "Spain"} Spain
+                  %option{:value => "Sri Lanka"} Sri Lanka
+                  %option{:value => "Sudan"} Sudan
+                  %option{:value => "Suriname"} Suriname
+                  %option{:value => "Svalbard and Jan Mayen"} Svalbard and Jan Mayen
+                  %option{:value => "Swaziland"} Swaziland
+                  %option{:value => "Sweden"} Sweden
+                  %option{:value => "Switzerland"} Switzerland
+                  %option{:value => "Syrian Arab Republic"} Syrian Arab Republic
+                  %option{:value => "Taiwan, Province of China"} Taiwan, Province of China
+                  %option{:value => "Tajikistan"} Tajikistan
+                  %option{:value => "Tanzania, United Republic of"} Tanzania, United Republic of
+                  %option{:value => "Thailand"} Thailand
+                  %option{:value => "Timor-leste"} Timor-leste
+                  %option{:value => "Togo"} Togo
+                  %option{:value => "Tokelau"} Tokelau
+                  %option{:value => "Tonga"} Tonga
+                  %option{:value => "Trinidad and Tobago"} Trinidad and Tobago
+                  %option{:value => "Tunisia"} Tunisia
+                  %option{:value => "Turkey"} Turkey
+                  %option{:value => "Turkmenistan"} Turkmenistan
+                  %option{:value => "Turks and Caicos Islands"} Turks and Caicos Islands
+                  %option{:value => "Tuvalu"} Tuvalu
+                  %option{:value => "Uganda"} Uganda
+                  %option{:value => "Ukraine"} Ukraine
+                  %option{:value => "United Arab Emirates"} United Arab Emirates
+                  %option{:value => "United Kingdom"} United Kingdom
+                  %option{:value => "United States"} United States
+                  %option{:value => "United States Minor Outlying Islands"} United States Minor Outlying Islands
+                  %option{:value => "Uruguay"} Uruguay
+                  %option{:value => "Uzbekistan"} Uzbekistan
+                  %option{:value => "Vanuatu"} Vanuatu
+                  %option{:value => "Venezuela"} Venezuela
+                  %option{:value => "Viet Nam"} Viet Nam
+                  %option{:value => "Virgin Islands, British"} Virgin Islands, British
+                  %option{:value => "Virgin Islands, U.S."} Virgin Islands, U.S.
+                  %option{:value => "Wallis and Futuna"} Wallis and Futuna
+                  %option{:value => "Western Sahara"} Western Sahara
+                  %option{:value => "Yemen"} Yemen
+                  %option{:value => "Zambia"} Zambia
+                  %option{:value => "Zimbabwe"} Zimbabwe
+                %select#agents_state{"data-placeholder" => "Choose your state/region", :name => "agents_state"}
+                  %option{:value => ""}
+                  %option{:value => "state1"} State/Region1
+                  %option{:value => "state2"} State/Region2
+                  %option{:value => "state3"} State/Region3
+                  %option{:value => "state4"} State/Region4
+                  %option{:value => "state5"} State/Region5
+                  %option{:value => "state6"} State/Region6
+                %select#agents_city{"data-placeholder" => "Choose your city", :name => "agents_city"}
+                  %option{:value => ""}
+                  %option{:value => "city1"} City1
+                  %option{:value => "city2"} City2
+                  %option{:value => "city3"} City3
+                  %option{:value => "city4"} City4
+                  %option{:value => "city5"} City5
+                  %option{:value => "city6"} City6
+                  %option{:value => "city7"} City7
+                .form-actions
+                  %button.btn.btn-default Search
+              / END FIND AGENTS
+              / BEGIN AGENCIES
+              #agencies.col-sm-12{"data-animation-delay" => "250", "data-animation-direction" => "fade"}
+                %h2.section-title Our Agencies
+                .mapborder
+                  #map_agency.gmap
+                %select#agency{"data-placeholder" => "Choose an agency", :name => "agency"}
+                  %option{:value => ""}
+                  /
+                    The list of agencies will be automatically created.
+                    Set the list of agencies in the file js/agencies.js
+              / END AGENCIES
+              / BEGIN TESTIMONIALS
+              #testimonials.col-sm-12{"data-animation-delay" => "200", "data-animation-direction" => "from-bottom"}
+                %h2.section-title Testimonials
+                #testimonials-slider.owl-carousel.testimonials
+                  .item
+                    %blockquote.text
+                      %p Lorem ipsum dolor sit amet consectetur adipiscing elit. Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis.
+                    .author
+                      %img{:alt => "", :src => "http://placehold.it/61x61"}/
+                      %div
+                        Mark Maecenas
+                        %br/
+                        %span CEO at Lorem Ipsum Agency
+                  .item
+                    %blockquote.text
+                      %p Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis.
+                    .author
+                      %img{:alt => "", :src => "http://placehold.it/61x61"}/
+                      %div
+                        John Doe
+                        %br/
+                        %span CTO at Dolor Sit Amet Agency
+                  .item
+                    %blockquote.text
+                      %p Lorem ipsum dolor sit amet consectetur adipiscing elit. Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis. Nullam ac enim auctor, fringilla risus at, imperdiet turpis.
+                    .author
+                      %img{:alt => "", :src => "http://placehold.it/61x61"}/
+                      %div
+                        Mary Smith
+                        %br/
+                        %span UFO at Some Agency
+              / END TESTIMONIALS
+              / BEGIN NEWSLETTER
+              .col-sm-12{"data-animation-delay" => "200", "data-animation-direction" => "from-bottom"}
+                #newsletter.col-sm-12
+                  %h2.section-title
+                    Subscribe our weekly
+                    %br/
+                    %span Newsletter
+                  %p Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet consectetur adipiscing elit.
+                  .input-group
+                    %input#newsletter_email.form-control{:name => "newsletter_email", :placeholder => "Enter your E-mail", :type => "text"}/
+                    %span.input-group-btn
+                      %button.btn.btn-default{:type => "button"} Subscribe
+              / END NEWSLETTER
+            / END SIDEBAR
+      / END CONTENT WRAPPER
+      / BEGIN PARTNERS WRAPPER
+      .parallax.pattern-bg{"data-stellar-background-ratio" => "0.5"}
+        .container
+          .row
+            .col-sm-12
+              %h1.section-title{"data-animation-delay" => "50", "data-animation-direction" => "from-bottom"} Our Partners
+              #partners
+                .item{"data-animation-delay" => "250", "data-animation-direction" => "from-bottom"}
+                  %a{:href => "#"}
+                    %img{:alt => "", :onmouseout => "this.src='http://placehold.it/194x45';", :onmouseover => "this.src='http://placehold.it/194x45';", :src => "http://placehold.it/194x45"}/
+                .item{"data-animation-delay" => "450", "data-animation-direction" => "from-bottom"}
+                  %a{:href => "#"}
+                    %img{:alt => "", :onmouseout => "this.src='http://placehold.it/194x45';", :onmouseover => "this.src='http://placehold.it/194x45';", :src => "http://placehold.it/194x45"}/
+                .item{"data-animation-delay" => "650", "data-animation-direction" => "from-bottom"}
+                  %a{:href => "#"}
+                    %img{:alt => "", :onmouseout => "this.src='http://placehold.it/194x45';", :onmouseover => "this.src='http://placehold.it/194x45';", :src => "http://placehold.it/194x45"}/
+                .item{"data-animation-delay" => "850", "data-animation-direction" => "from-bottom"}
+                  %a{:href => "#"}
+                    %img{:alt => "", :onmouseout => "this.src='http://placehold.it/194x45';", :onmouseover => "this.src='http://placehold.it/194x45';", :src => "http://placehold.it/194x45"}/
+      / END PARTNERS WRAPPER
+      / BEGIN FOOTER
+      %footer#footer
+        #footer-top.container
+          .row
+            .block.col-sm-3
+              %a{:href => "index.html"}
+                %img{:alt => "Cozy Logo", :src => "images/logo.png"}/
+              %br/
+              %br/
+              %p Cozy is a simple clean and modern HTML template designed for Real Estate business. This template has a lot of useful features and it's highly customizable so you can turn it into your own awesome website.
+            .block.col-sm-3
+              %h3 Contact Info
+              %ul.footer-contacts
+                %li
+                  %i.fa.fa-map-marker
+                  24th Street, New York, USA
+                %li
+                  %i.fa.fa-phone
+                  00351 123 456 789
+                %li
+                  %i.fa.fa-envelope
+                  %a{:href => "mailto:email@yourbusiness.com"} email@yourbusiness.com
+            .block.col-sm-3
+              %h3 Helpful Links
+              %ul.footer-links
+                %li
+                  %a{:href => "properties-list.html"} All Properties Available
+                %li
+                  %a{:href => "agent-listing.html"} Look for an Agent
+                %li
+                  %a{:href => "agency-listing.html"} Look for an Agency
+                %li
+                  %a{:href => "pricing-tables.html"} See our Pricing Tables
+            .block.col-sm-3
+              %h3 Latest Listings
+              %ul.footer-listings
+                %li
+                  .image
+                    %a{:href => "properties-detail.html"}
+                      %img{:alt => "", :src => "http://placehold.it/760x670"}/
+                  %p
+                    %a{:href => "properties-detail.html"}
+                      Luxury Apartment with great views
+                      %span +
+                %li
+                  .image
+                    %a{:href => "properties-detail.html"}
+                      %img{:alt => "", :src => "http://placehold.it/760x670"}/
+                  %p
+                    %a{:href => "properties-detail.html"}
+                      Stunning Villa with 5 bedrooms
+                      %span +
+                %li
+                  .image
+                    %a{:href => "properties-detail.html"}
+                      %img{:alt => "", :src => "http://placehold.it/760x670"}/
+                  %p
+                    %a{:href => "properties-detail.html"}
+                      Recent construction with 3 bedrooms.
+                      %span +
+        / BEGIN COPYRIGHT
+        #copyright
+          .container
+            .row
+              .col-sm-12
+                \© 2014 Cozy - Real Estate template. All rights reserved. Developed by
+                %a{:href => "http://www.wiselythemes.com", :target => "_blank"} WiselyThemes
+                / BEGIN SOCIAL NETWORKS
+                %ul.social-networks
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-facebook
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-twitter
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-google
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-pinterest
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-youtube
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-rss
+                / END SOCIAL NETWORKS
+        / END COPYRIGHT
+      / END FOOTER
+    / END WRAPPER
+    / Libs
+    {{ 'common.js' | javascript_tag }}
+    {{ 'jquery.prettyPhoto.js' | javascript_tag }}
+    {{ 'owl.carousel.min.js' | javascript_tag }}
+    {{ 'chosen.jquery.min.js' | javascript_tag }}
+    %script{:src => "http://maps.google.com/maps/api/js?sensor=false", :type => "text/javascript"}
+    {{ 'infobox.min.js' | javascript_tag }}
+    / Template Scripts
+    {{ 'variables.js' | javascript_tag }}
+    {{ 'scripts.js' | javascript_tag }}
+    / Agencies listdd
+    {{ 'agencies.js' | javascript_tag }}
+    :javascript
+      (function($){
+      	"use strict";
+      	
+      	$(document).ready(function(){
+      		//Create agencies map with markers and populate dropdown agencies list.
+      		Cozy.agencyMap(agencies, "map_agency");
+      	});
+      })(jQuery);

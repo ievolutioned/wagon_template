@@ -1,0 +1,15 @@
+# development:
+#   host: dev.example.com
+#   email: john@doe.net
+#   password: apassword
+#   # api_key: <your api key here>
+# staging:
+#   host: staging.example.com
+#   email: john@doe.net
+#   password: apassword
+#   # api_key: <your api key here>
+development:
+  host: http://localhost:3000
+  handle: serene-flowers-3628
+  email: david_xkr@hotmail.com
+  api_key: 5e219728046bcc1834e84123a69f9430698bc295
